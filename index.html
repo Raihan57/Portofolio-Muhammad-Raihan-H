@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Muhammad Raihan Hibatullah — D3 Teknik Komputer &amp; Jaringan Komputer</title>
+    <meta name="description" content="Portofolio resmi dan resume interaktif Muhammad Raihan Hibatullah. Mahasiswa D3 Teknik Komputer Universitas Duta Bangsa Surakarta, spesialisasi Jaringan Komputer, Hardware, IT Support, dan IoT.">
+    <meta name="color-scheme" content="light dark">
+
+    <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Optimasi posisi avatar pasfoto agar proporsional */
+        .profile-img {
+            object-position: center 15% !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- INTERACTIVE BACKGROUND -->
+    <div class="bg-grid" id="bgGrid"></div>
+    <div class="spotlight-cursor" id="spotlightCursor"></div>
+    <div class="ambient-glow orb-1"></div>
+    <div class="ambient-glow orb-2"></div>
+
+    <!-- FLOATING GLASS NAVBAR -->
+    <header class="navbar-wrapper">
+        <nav class="floating-nav" id="floatingNav">
+            <a href="#hero" class="nav-brand">
+                <span class="nav-avatar-circle">R</span>
+                <span class="nav-name">M. Raihan H</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="#about" class="nav-link">Tentang</a>
+                <a href="#experience" class="nav-link">Pengalaman</a>
+                <a href="#projects" class="nav-link">Proyek</a>
+                <a href="#skills" class="nav-link">Keahlian</a>
+                <a href="#certificates" class="nav-link">Sertifikat</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+            </div>
+
+            <div class="nav-tools">
+                <button type="button" class="theme-toggle" id="themeToggle" aria-label="Ganti Tema">
+                    <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <a href="cv/CV-Muhammad-Raihan-Hibatullah.docx" download class="btn-nav-cv" title="Unduh Curriculum Vitae">
+                    <span>CV</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-container">
+
+        <!-- HERO SECTION -->
+        <section class="hero-section" id="hero">
+            <div class="hero-left">
+                <div class="status-pill animate-fade-in" style="animation-delay: 0.1s;">
+                    <span class="status-ping"></span>
+                    <span class="status-text">Siap untuk Magang / PKL &amp; Proyek Jaringan / IT Support</span>
+                </div>
+
+                <h1 class="hero-heading animate-fade-in" style="animation-delay: 0.2s;">
+                    Halo, saya <span class="shimmer-text">Muhammad Raihan</span>
+                </h1>
+
+                <p class="hero-subheading animate-fade-in" style="animation-delay: 0.3s;">
+                    Mahasiswa <strong>D3 Teknik Komputer</strong> di Universitas Duta Bangsa Surakarta. Berpengalaman praktik industri di bidang <strong>Perakitan PC, Maintenance Hardware, dan Instalasi Jaringan LAN</strong>, serta terbiasa membangun sistem berbasis <strong>Mikrokontroler (ESP32/Arduino)</strong> dan aplikasi jaringan.
+                </p>
+
+                <div class="hero-actions animate-fade-in" style="animation-delay: 0.4s;">
+                    <a href="#projects" class="btn-glow-primary">
+                        <span>Lihat Proyek</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+
+                    <a href="https://wa.me/6285848690399?text=Halo%20Muhammad%20Raihan,%20saya%20tertarik%20dengan%20portofolio%20Anda." target="_blank" rel="noopener noreferrer" class="btn-ghost-action">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <span>WhatsApp</span>
+                    </a>
+
+                    <a href="https://github.com/Raihan57" target="_blank" rel="noopener noreferrer" class="btn-icon-square" title="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+                        </svg>
+                    </a>
+
+                    <a href="mailto:240104006@mhs.udb.ac.id" class="btn-icon-square" title="Email">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-right animate-fade-in" style="animation-delay: 0.3s;">
+                <div class="profile-frame tilt-card">
+                    <div class="profile-glow"></div>
+                    <img src="images/avatar.jpg" alt="Muhammad Raihan Hibatullah" class="profile-img">
+                    <div class="profile-meta">
+                        <div class="profile-name">Muhammad Raihan Hibatullah</div>
+                        <div class="profile-univ">Universitas Duta Bangsa Surakarta</div>
+                        <div class="profile-tags">
+                            <span class="chip-mini">D3 Teknik Komputer</span>
+                            <span class="chip-mini">Junior Network Admin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="content-section" id="about">
+            <div class="section-badge">
+                <span class="badge-dot"></span>
+                <span>TENTANG SAYA</span>
+            </div>
+            <div class="split-layout">
+                <div class="split-left">
+                    <h2 class="section-title">Kombinasi Pengalaman Praktik Lapangan &amp; Solusi Komputer</h2>
+                </div>
+                <div class="split-right">
+                    <p class="lead-text">
+                        Saya adalah mahasiswa <strong>D3 Teknik Komputer Universitas Duta Bangsa Surakarta</strong> dengan minat mendalam pada bidang <strong>Jaringan Komputer, IT Hardware &amp; Troubleshooting</strong>, serta <strong>Internet of Things (IoT)</strong>. Selama perkuliahan dan praktik lapangan, saya terbiasa melakukan perancangan topologi LAN, konfigurasi perangkat jaringan, hingga pemrograman mikrokontroler.
+                    </p>
+                    <p class="sub-text">
+                        Berbekal pengalaman magang industri di <strong>SG Computer Solo</strong> selama 3 bulan, saya memiliki ketelitian mekanikal dalam merakit PC, mendiagnosis kerusakan hardware/software, terminasi kabel UTP standar internasional, dan memberikan pelayanan teknis terbaik kepada pengguna. Berorientasi pada hasil, disiplin, dan siap bekerja secara tim maupun mandiri.
+                    </p>
+                    <div class="quick-facts-grid">
+                        <div class="fact-box">
+                            <span class="fact-icon">📍</span>
+                            <div>
+                                <span class="fact-label">Domisili</span>
+                                <strong class="fact-value">Tipes, Surakarta</strong>
+                            </div>
+                        </div>
+                        <div class="fact-box">
+                            <span class="fact-icon">🎓</span>
+                            <div>
+                                <span class="fact-label">Pendidikan</span>
+                                <strong class="fact-value">D3 Teknik Komputer (UDB)</strong>
+                            </div>
+                        </div>
+                        <div class="fact-box">
+                            <span class="fact-icon">📡</span>
+                            <div>
+                                <span class="fact-label">Fokus Bidang</span>
+                                <strong class="fact-value">Jaringan Komputer &amp; IT Support</strong>
+                            </div>
+                        </div>
+                        <div class="fact-box">
+                            <span class="fact-icon">⚡</span>
+                            <div>
+                                <span class="fact-label">Ketersediaan</span>
+                                <strong class="fact-value">Magang / PKL Industri (Aktif)</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section class="content-section" id="experience">
+            <div class="section-badge">
+                <span class="badge-dot"></span>
+                <span>PENGALAMAN PRAKTIK</span>
+            </div>
+            <div class="split-layout">
+                <div class="split-left">
+                    <h2 class="section-title">Pengalaman Kerja Industri (Magang)</h2>
+                    <p class="section-desc">Penerapan nyata keahlian teknisi komputer, hardware, dan instalasi jaringan pada dunia kerja profesional.</p>
+                </div>
+                <div class="split-right">
+                    <div class="timeline-container">
+                        <div class="timeline-card spotlight-card">
+                            <div class="card-header-row">
+                                <div>
+                                    <span class="card-tag">COMPUTER STORE &amp; IT SERVICE CENTER</span>
+                                    <h3 class="card-company">SG Computer Solo (sgonline.co.id)</h3>
+                                    <div class="card-role">Teknisi Hardware, Troubleshooting &amp; Jaringan (Magang)</div>
+                                </div>
+                                <div class="card-date-badge">Magang 3 Bulan — Kinerja Luar Biasa</div>
+                            </div>
+                            <div class="card-body">
+                                <ul class="task-list">
+                                    <li>
+                                        <div class="bullet-glow"></div>
+                                        <div>
+                                            <strong>Perakitan &amp; Perawatan Hardware PC/Laptop:</strong> Merakit unit PC desktop dari komponen baru sesuai kebutuhan pelanggan, pembersihan debu sirkuit, penggantian thermal paste prosesor, instalasi RAM &amp; SSD, serta pengujian stabilitas hardware.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="bullet-glow"></div>
+                                        <div>
+                                            <strong>Instalasi Sistem Operasi &amp; Troubleshooting:</strong> Menangani instalasi Windows 10/11 dan Linux (Debian), instalasi driver perangkat, perbaikan crash/bluescreen, pemulihan data partisi, dan penanganan malware/virus.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="bullet-glow"></div>
+                                        <div>
+                                            <strong>Instalasi Jaringan &amp; Crimping UTP:</strong> Melakukan penarikan kabel data LAN, crimping konektor RJ45 standar T568B, pengecekan kontinuitas sinyal menggunakan LAN tester, serta konfigurasi router dan access point.
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="bullet-glow"></div>
+                                        <div>
+                                            <strong>Pelayanan Teknis &amp; Komunikasi Pelanggan:</strong> Mendiagnosis kendala perangkat dari konsultasi pelanggan, mengidentifikasi kerusakan suku cadang, dan memberikan rekomendasi solusi teknis secara ramah dan profesional.
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION (INTERACTIVE SHOWCASE) -->
+        <section class="content-section" id="projects">
+            <div class="section-badge">
+                <span class="badge-dot"></span>
+                <span>KARYA &amp; PROYEK</span>
+            </div>
+            <div class="section-header-centered">
+                <h2 class="section-title">Proyek yang Pernah Saya Bangun</h2>
+                <p class="section-desc">Implementasi mikrokontroler hardware, sistem kendali IoT, dan aplikasi web terstruktur.</p>
+            </div>
+
+            <div class="projects-grid">
+                
+                <!-- PROYEK 1: ESP32 + BLYNK -->
+                <div class="project-card spotlight-card">
+                    <div class="project-thumb-box" onclick="openModal('images/proyek-esp32.jpg', 'Smart Lighting System ESP32 &amp; IoT Blynk')">
+                        <img src="images/proyek-esp32.jpg" alt="Smart Lighting ESP32 Blynk" class="project-thumb">
+                        <div class="thumb-overlay">
+                            <span class="zoom-btn">🔍 Perbesar Foto</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-status-row">
+                            <span class="status-live-tag"><span class="live-dot-pulse"></span> Sistem Aktif</span>
+                            <span class="category-tag">Internet of Things</span>
+                        </div>
+                        <h3 class="project-heading">Smart Lighting System Berbasis ESP32 &amp; Blynk IoT</h3>
+                        <p class="project-summary">
+                            Kendali saklar penerangan ruangan nirkabel via WiFi menggunakan mikrokontroler ESP32 DevKit, terintegrasi ke dashboard mobile Blynk dengan fitur penjadwalan waktu otomatis.
+                        </p>
+                        <div class="tech-pills">
+                            <span>ESP32</span>
+                            <span>Blynk Cloud</span>
+                            <span>C / C++</span>
+                            <span>Relay 5V</span>
+                            <span>WiFi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYEK 2: ARDUINO + LDR + SENATIB -->
+                <div class="project-card spotlight-card">
+                    <div class="project-thumb-box" onclick="openModal('images/proyek-arduino-ldr.jpg', 'Lampu Otomatis Menggunakan Sensor LDR Pada Miniatur Angkringan (Dipublikasikan di SENATIB)')">
+                        <img src="images/proyek-arduino-ldr.jpg" alt="Lampu Sensor LDR Arduino" class="project-thumb">
+                        <div class="thumb-overlay">
+                            <span class="zoom-btn">🔍 Perbesar Foto</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-status-row">
+                            <span class="status-paper-tag">📜 Karya Ilmiah SENATIB</span>
+                            <span class="category-tag">Hardware Otomasi</span>
+                        </div>
+                        <h3 class="project-heading">Lampu Otomatis Sensor LDR pada Miniatur Angkringan</h3>
+                        <p class="project-summary">
+                            Prototipe penerangan cerdas otomatis yang mengukur intensitas cahaya sekitar menggunakan sensor analog LDR dan relay penggerak. Dipresentasikan sebagai pemakalah resmi di <strong>SENATIB</strong> Universitas Duta Bangsa Surakarta.
+                        </p>
+                        <div class="tech-pills">
+                            <span>Arduino Uno</span>
+                            <span>Sensor LDR</span>
+                            <span>Modul Relay</span>
+                            <span>Paper SENATIB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYEK 3: FLASHMIND WEB APP -->
+                <div class="project-card spotlight-card">
+                    <div class="project-thumb-box fallback-code-thumb">
+                        <div class="code-preview-screen">
+                            <div class="terminal-bar">
+                                <span class="t-dot red"></span>
+                                <span class="t-dot yellow"></span>
+                                <span class="t-dot green"></span>
+                                <span class="t-title">flashcard-app.vercel.app</span>
+                            </div>
+                            <div class="code-content">
+                                <div class="code-line"><span class="kwd">import</span> { createClient } <span class="kwd">from</span> <span class="str">'@supabase/supabase-js'</span></div>
+                                <div class="code-line"><span class="com">// Algoritma Retensi SuperMemo SM-2</span></div>
+                                <div class="code-line"><span class="kwd">const</span> nextInterval = <span class="fn">calculateNextReview</span>(quality)</div>
+                                <div class="code-line"><span class="kwd">await</span> supabase.<span class="fn">rpc</span>(<span class="str">'update_card'</span>, { interval })</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-status-row">
+                            <span class="status-live-tag"><span class="live-dot-pulse"></span> Live Deployment</span>
+                            <div class="project-ext-links">
+                                <a href="https://flashcard-app-sepia-three.vercel.app" target="_blank" rel="noopener noreferrer" class="link-icon" title="Buka Live Demo">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                                <a href="https://github.com/Raihan57" target="_blank" rel="noopener noreferrer" class="link-icon" title="Repositori GitHub">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-heading">FlashMind — Spaced Repetition Web App</h3>
+                        <p class="project-summary">
+                            Aplikasi web flashcard modern dengan kurva retensi memori algoritma SM-2. Backend cloud terhubung ke PostgreSQL Supabase via Stored Procedure RPC dan dideploy ke Vercel.
+                        </p>
+                        <div class="tech-pills">
+                            <span>Supabase Cloud</span>
+                            <span>PostgreSQL RPC</span>
+                            <span>Vanilla JS</span>
+                            <span>Vercel</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section class="content-section" id="skills">
+            <div class="section-badge">
+                <span class="badge-dot"></span>
+                <span>KOMPETENSI</span>
+            </div>
+            <div class="split-layout">
+                <div class="split-left">
+                    <h2 class="section-title">Keahlian &amp; Penguasaan Alat</h2>
+                    <p class="section-desc">Kombinasi perangkat keras komputer, infrastruktur jaringan LAN, sistem operasi, dan teknologi embedded.</p>
+                </div>
+                <div class="split-right">
+                    <div class="skills-grid">
+                        
+                        <div class="skill-category-card spotlight-card">
+                            <div class="category-header">
+                                <span class="cat-icon">🖥️</span>
+                                <div>
+                                    <h4 class="cat-name">Hardware &amp; Troubleshooting</h4>
+                                    <span class="cat-sub">Perakitan &amp; perbaikan PC / Laptop</span>
+                                </div>
+                            </div>
+                            <div class="cat-pills">
+                                <span class="pill-item">Perakitan PC Desktop</span>
+                                <span class="pill-item">Diagnostik Hardware</span>
+                                <span class="pill-item">Upgrade RAM &amp; SSD</span>
+                                <span class="pill-item">Thermal Paste &amp; Cleaning</span>
+                                <span class="pill-item">Benchmarking &amp; Stress Test</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category-card spotlight-card">
+                            <div class="category-header">
+                                <span class="cat-icon">📡</span>
+                                <div>
+                                    <h4 class="cat-name">Jaringan Komputer</h4>
+                                    <span class="cat-sub">Infrastruktur data &amp; lapangan</span>
+                                </div>
+                            </div>
+                            <div class="cat-pills">
+                                <span class="pill-item">Crimping RJ45 (T568B)</span>
+                                <span class="pill-item">Pengujian Kabel (LAN Tester)</span>
+                                <span class="pill-item">Setup Router &amp; Access Point</span>
+                                <span class="pill-item">Subnetting &amp; IP Addressing</span>
+                                <span class="pill-item">Cisco Packet Tracer</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category-card spotlight-card">
+                            <div class="category-header">
+                                <span class="cat-icon">🐧</span>
+                                <div>
+                                    <h4 class="cat-name">Sistem Operasi &amp; Server</h4>
+                                    <span class="cat-sub">Manajemen sistem &amp; virtualisasi</span>
+                                </div>
+                            </div>
+                            <div class="cat-pills">
+                                <span class="pill-item">Linux (Debian / Ubuntu CLI)</span>
+                                <span class="pill-item">Windows 10 / 11 Pro</span>
+                                <span class="pill-item">VirtualBox VM</span>
+                                <span class="pill-item">Git &amp; GitHub (@Raihan57)</span>
+                                <span class="pill-item">Briker IP-PBX Dasar</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category-card spotlight-card">
+                            <div class="category-header">
+                                <span class="cat-icon">⚡</span>
+                                <div>
+                                    <h4 class="cat-name">Mikrokontroler &amp; Dasar Web</h4>
+                                    <span class="cat-sub">Embedded IoT &amp; pengolahan basis data</span>
+                                </div>
+                            </div>
+                            <div class="cat-pills">
+                                <span class="pill-item">ESP32 (WiFi &amp; Blynk)</span>
+                                <span class="pill-item">Arduino Uno &amp; IDE</span>
+                                <span class="pill-item">Sensor LDR &amp; Relay 5V</span>
+                                <span class="pill-item">HTML5, CSS3, JavaScript</span>
+                                <span class="pill-item">MySQL / PostgreSQL</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATES SECTION -->
+        <section class="content-section" id="certificates">
+            <div class="section-badge">
+                <span class="badge-dot"></span>
+                <span>BUKTI RESMI</span>
+            </div>
+            <div class="section-header-centered">
+                <h2 class="section-title">Sertifikasi &amp; Penghargaan Industri</h2>
+                <p class="section-desc">Dokumentasi resmi kelulusan magang industri dan partisipasi pengembangan kompetensi teknis.</p>
+            </div>
+
+            <div class="certs-grid">
+                
+                <!-- SERTIFIKAT 1: SG COMPUTER SOLO -->
+                <div class="cert-box spotlight-card" onclick="openModal('images/sertifikat-magang-sg.jpg', 'Sertifikat Penghargaan Magang Kerja Industri — SG Computer Solo (sgonline.co.id)')">
+                    <div class="cert-img-wrap">
+                        <img src="images/sertifikat-magang-sg.jpg" alt="Sertifikat Magang SG Computer Solo" class="cert-thumb">
+                        <div class="cert-hover-tag">🔍 Klik untuk Pratinjau Dokumen</div>
+                    </div>
+                    <div class="cert-info">
+                        <div class="cert-date-row">
+                            <span class="cert-pill-badge">MAGANG INDUSTRI</span>
+                            <span class="cert-year">Program 3 Bulan</span>
+                        </div>
+                        <h3 class="cert-main-title">Sertifikat Penghargaan Kinerja Magang</h3>
+                        <p class="cert-issuer">Diterbitkan oleh: <strong>SG Computer Solo (sgonline.co.id)</strong></p>
+                        <p class="cert-desc">
+                            Penghargaan resmi atas kinerja luar biasa selama program magang 3 bulan dalam lingkup teknisi perakitan PC, troubleshooting hardware &amp; software, serta konfigurasi jaringan komputer.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- SERTIFIKAT 2: SENATIB / SEMINAR -->
+                <div class="cert-box spotlight-card" onclick="openModal('images/sertifikat-senatib.png', 'Sertifikat Pemakalah SENATIB — Universitas Duta Bangsa Surakarta')">
+                    <div class="cert-img-wrap">
+                        <img src="images/sertifikat-senatib.png" alt="Sertifikat Pemakalah SENATIB" class="cert-thumb">
+                        <div class="cert-hover-tag">🔍 Klik untuk Pratinjau Dokumen</div>
+                    </div>
+                    <div class="cert-info">
+                        <div class="cert-date-row">
+                            <span class="cert-pill-badge">SEMINAR ILMIAH</span>
+                            <span class="cert-year">Karya Terpublikasi</span>
+                        </div>
+                        <h3 class="cert-main-title">Sertifikat Pemakalah Karya Ilmiah</h3>
+                        <p class="cert-issuer">Diterbitkan oleh: <strong>Universitas Duta Bangsa Surakarta</strong></p>
+                        <p class="cert-desc">
+                            Penghargaan pemakalah resmi karya ilmiah implementasi sistem kendali perangkat keras: <em>"Lampu Otomatis Menggunakan Sensor LDR Pada Miniatur Angkringan"</em>.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="content-section" id="contact">
+            <div class="contact-card-premium spotlight-card">
+                <div class="contact-header">
+                    <div class="section-badge center">
+                        <span class="badge-dot"></span>
+                        <span>TERHUBUNG</span>
+                    </div>
+                    <h2 class="contact-title">Mari Berdiskusi &amp; Berkolaborasi</h2>
+                    <p class="contact-lead">
+                        Saya siap ditempatkan untuk kegiatan Magang / PKL, teknisi lapangan, instalasi jaringan komputer, maupun pemeliharaan perangkat keras IT.
+                    </p>
+                </div>
+
+                <div class="contact-channels-grid">
+                    <a href="https://wa.me/6285848690399?text=Halo%20Muhammad%20Raihan,%20saya%20melihat%20portofolio%20Anda." target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+                        <div class="chan-icon wa">💬</div>
+                        <div class="chan-info">
+                            <span class="chan-label">WhatsApp Langsung</span>
+                            <strong class="chan-value">+62 858-4869-0399</strong>
+                            <span class="chan-sub">Respon cepat (Chat / Panggilan)</span>
+                        </div>
+                    </a>
+
+                    <a href="mailto:240104006@mhs.udb.ac.id" class="contact-channel-item">
+                        <div class="chan-icon mail">✉️</div>
+                        <div class="chan-info">
+                            <span class="chan-label">Email Mahasiswa</span>
+                            <strong class="chan-value">240104006@mhs.udb.ac.id</strong>
+                            <span class="chan-sub">Keperluan surat &amp; akademik</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/Raihan57" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+                        <div class="chan-icon git">🐙</div>
+                        <div class="chan-info">
+                            <span class="chan-label">GitHub Profile</span>
+                            <strong class="chan-value">Raihan57</strong>
+                            <span class="chan-sub">Kode sumber &amp; repositori</span>
+                        </div>
+                    </a>
+
+                    <a href="cv/CV-Muhammad-Raihan-Hibatullah.docx" download class="contact-channel-item">
+                        <div class="chan-icon cv">📄</div>
+                        <div class="chan-info">
+                            <span class="chan-label">Curriculum Vitae</span>
+                            <strong class="chan-value">CV-Muhammad-Raihan-Hibatullah.docx</strong>
+                            <span class="chan-sub">Unduh berkas CV lengkap</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-bottom">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <strong>Muhammad Raihan Hibatullah</strong>
+                <span>D3 Teknik Komputer — Universitas Duta Bangsa Surakarta</span>
+            </div>
+            <div class="footer-copy">
+                <span>© 2026. Handcrafted with modern clean engineering.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="lightbox" id="lightbox" onclick="closeModal(event)">
+        <div class="lightbox-dialog">
+            <button class="lightbox-close" onclick="closeModalDirect()">&times;</button>
+            <img src="" alt="" id="lightboxImg">
+            <p id="lightboxCaption"></p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT: THEME, SPOTLIGHT, AND MODALS -->
+    <script>
+        // 1. Theme Management
+        const root = document.documentElement;
+        const themeBtn = document.getElementById('themeToggle');
+
+        function applyTheme(theme) {
+            root.dataset.theme = theme;
+            localStorage.setItem('theme', theme);
+        }
+
+        function toggleTheme() {
+            const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+            applyTheme(next);
+        }
+
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        applyTheme(savedTheme);
+        themeBtn.addEventListener('click', toggleTheme);
+
+        // 2. Interactive Spotlight Cursor & Mouse Tracking on Cards
+        const spotlight = document.getElementById('spotlightCursor');
+        const cards = document.querySelectorAll('.spotlight-card');
+
+        window.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+
+            // Move ambient spotlight
+            if (spotlight) {
+                spotlight.style.transform = `translate(${x - 200}px, ${y - 200}px)`;
+            }
+
+            // Update card spotlight coordinates
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const cardX = e.clientX - rect.left;
+                const cardY = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${cardX}px`);
+                card.style.setProperty('--mouse-y', `${cardY}px`);
+            });
+        });
+
+        // 3. Smooth Active Nav Link on Scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const scrollPos = window.pageYOffset + 200;
+
+            sections.forEach(section => {
+                const top = section.offsetTop;
+                const height = section.offsetHeight;
+                if (scrollPos >= top && scrollPos < top + height) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // 4. Lightbox Modal Functions
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+
+        function openModal(src, caption) {
+            lightboxImg.src = src;
+            lightboxCaption.textContent = caption || '';
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModalDirect() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closeModal(e) {
+            if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
+                closeModalDirect();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeModalDirect();
+            }
+        });
+    </script>
+</body>
+</html>
